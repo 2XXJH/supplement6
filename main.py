@@ -34,7 +34,7 @@ def solve_linear_system(A, b):
 def generate_integers_and_index(shape):
     """
     Generates an array of integers and separates even and odd indexes.
-    :param shape: Shape of the array
+    :param shape: Shape of the array.
     :return: Tuple of (generated array, even indexes, odd indexes)
     """
     array = np.random.randint(0, 100, shape)
