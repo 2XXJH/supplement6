@@ -14,7 +14,7 @@ def generate_normal_array(mean, std_dev, shape):
 def solve_linear_system(A, b):
     """
     Solves a system of equations using Cramer's rule.
-    :param A: Coefficient matrix (square matrix)
+    :param A: Coefficient matrix (square matrix).
     :param b: Constant terms vector
     :return: List of solutions for the variables
     """
