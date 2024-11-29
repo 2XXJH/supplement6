@@ -31,7 +31,36 @@ def solve_linear_system(A, b):
     
     return solutions
 
-def test_generate_integers_and_index():
+def generate_integers_and_index(shape):
+    """
+    Generates an array of integers and separates even and odd indexes.
+    :param shape: Shape of the array
+    :return: Tuple of (generated array, even indexes, odd indexes)
+    """
+    array = np.random.randint(0, 100, shape)
+    even_indexes = list(zip(*np.where(array % 2 == 0)))
+    odd_indexes = list(zip(*np.where(array % 2 != 0)))
+    return array, even_indexes, odd_indexes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def test_should_generate_integers_and_index():
     shape = (4, 4)
     array, even_indexes, odd_indexes = generate_integers_and_index(shape)
     assert array.shape == shape, "Generated array shape mismatch"
