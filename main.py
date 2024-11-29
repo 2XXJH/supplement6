@@ -31,7 +31,14 @@ def solve_linear_system(A, b):
     
     return solutions
 
-
+def test_generate_integers_and_index():
+    shape = (4, 4)
+    array, even_indexes, odd_indexes = generate_integers_and_index(shape)
+    assert array.shape == shape, "Generated array shape mismatch"
+    for idx in even_indexes:
+        assert array[idx] % 2 == 0, f"Even index {idx} has an odd value"
+    for idx in odd_indexes:
+        assert array[idx] % 2 != 0, f"Odd index {idx} has an even value"
 
 
 
